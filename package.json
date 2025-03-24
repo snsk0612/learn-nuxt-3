@@ -32,5 +32,8 @@
   "dependencies": {
     "@quasar/extras": "^1.16.17",
     "quasar": "^2.18.1"
+  },
+  "engines": {
+    "node": "18"
   }
 }
