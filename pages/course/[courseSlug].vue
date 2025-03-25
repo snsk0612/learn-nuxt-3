@@ -88,7 +88,7 @@ if (!course) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Course not found',
-    fatal: true,
+    // fatal: true,
   });
 }
 
@@ -99,7 +99,7 @@ definePageMeta({
   // title: title.value,
   title: 'My home page',
   pageType: '',
-  keepalive: true,
+  // keepalive: true,
   alias: ['/lecture/:courseSlug'],
 });
 const memo = ref('');
