@@ -56,7 +56,7 @@
           unelevated
           :outline="completed ? false : true"
           :icon="completed ? 'check' : undefined"
-          @click="completed = !completed"
+          @click="toggleComplete"
         />
         <q-input
           v-model="memo"
@@ -80,10 +80,18 @@
 </template>
 
 <script setup lang="ts">
-
 const route = useRoute();
 const courseSlug = route.params.courseSlug as string
 const { course, prevCourse, nextCourse } = useCourse(courseSlug);
+
+if (!course) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Course not found',
+    fatal: true,
+  });
+}
+
 console.log('[courseSlug].vue 컴포넌트 setup hooks');
 // const title = ref('');
 definePageMeta({
@@ -100,6 +108,11 @@ const completed = ref(false);
 const movePage = async (path: string) => {
   await navigateTo(path)
 }
+
+const toggleComplete = () => {
+  // $fetch('/api/error');
+  completed.value = !completed.value;
+};
 </script>
 
 <style scoped></style>
