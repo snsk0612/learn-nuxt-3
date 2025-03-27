@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import type CourseSlug from './course/[courseSlug].vue';
 
-  const { courses } = useCourses();
+  const { courses } = await useCourses();
 </script>
 
 <style scoped>
