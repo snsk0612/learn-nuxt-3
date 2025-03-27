@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     strict: false, // strict mode 해제
   },
   modules: [
-    'nuxt-quasar-ui'
+    'nuxt-quasar-ui',
+    '@pinia/nuxt',
   ],
   quasar: {
     plugins: ['Notify'],
