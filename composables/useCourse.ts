@@ -1,10 +1,6 @@
-import type { CourseWithPath } from '~/types/course';
+import type { CourseReturn } from '~/types/course';
 
-interface CourseReturn {
-  course: Maybe<CourseWithPath>;
-  prevCourse: Maybe<CourseWithPath>;
-  nextCourse: Maybe<CourseWithPath>;
-}
+
 
 export const useCourse = (courseSlug: string): CourseReturn => {
   const { courses } = useCourses();
@@ -17,5 +13,5 @@ export const useCourse = (courseSlug: string): CourseReturn => {
     course,
     prevCourse,
     nextCourse,
-  }
+  };
 };

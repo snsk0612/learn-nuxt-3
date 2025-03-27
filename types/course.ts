@@ -36,3 +36,9 @@ export interface CourseWithPath {
   gymcodingUrl: string;
   path: string;
 }
+
+export interface CourseReturn {
+  course: Maybe<CourseWithPath>;
+  prevCourse: Maybe<CourseWithPath>;
+  nextCourse: Maybe<CourseWithPath>;
+}

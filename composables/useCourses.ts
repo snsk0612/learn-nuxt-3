@@ -12,7 +12,7 @@ export const useCourses = (): CourseReturn => {
     reviewsCount: item.reviewsCount.toLocaleString(),
     studentCount: item.studentCount.toLocaleString(),
     path: `/course/${item.courseSlug}`,
-  }))
+  }));
   return {
     courses,
   };
