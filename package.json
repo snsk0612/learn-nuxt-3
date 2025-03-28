@@ -17,6 +17,8 @@
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
+    "@volar/vue-language-server": "^1.6.5",
+    "@vue/language-server": "^2.2.8",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-nuxt": "^4.0.0",
